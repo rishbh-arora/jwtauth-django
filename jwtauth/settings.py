@@ -75,6 +75,7 @@ DATABASES = {
         'default': {
             'ENGINE': 'djongo',
             'ENFORCE_SCHEMA': False,
+            'NAME': 'mydb',
             'CLIENT': {
                 'host': env("MONGO_CONNETION_STRING")
                 }
