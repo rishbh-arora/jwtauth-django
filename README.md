@@ -16,19 +16,7 @@ A simple jwt authenticator implemented using Django rest framework and MongoDB a
   }
   ```
 
-  <br/>
-    Reponse body template:
-
-  ```
-  body: {
-      email: johndoe@example.com,
-      password: XXXXX
-  }
-  ```
-
 - **POST** /register: Client sends email ID and password. User object created in database.
-
-- All other wild endpoint redirects to **POST** /login
 
 ### Setup
 
