@@ -11,9 +11,9 @@ environ.Env.read_env(f"{BASE_DIR}/.env")
 
 SECRET_KEY = 'django-insecure-o4^#f$_ca=19_bxa+a6-k^@1=!#rj=#g3m5r^o%-2r$mpu0hd#'
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["https://127.0.0.1", "*"]
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -74,13 +74,12 @@ WSGI_APPLICATION = 'jwtauth.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'djongo',
-            'NAME': 'your-db-name',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': f'mongodb+srv://{env("MONGODB_USERNAME")}:{env("MONGODB_PASSWORD")}@db.6fgudxz.mongodb.net/?retryWrites=true&w=majority'
+                'host': env("MONGO_CONNETION_STRING")
+                }
             }  
         }
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
