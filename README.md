@@ -64,7 +64,3 @@ A simple jwt authenticator implemented using Django rest framework and MongoDB a
 
 6. Start server:
    Finally, start the server on local host using `python manage.py runserver`
-
-```
-
-```
